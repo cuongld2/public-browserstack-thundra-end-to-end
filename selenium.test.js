@@ -72,6 +72,11 @@ await driver.takeScreenshot()
         await getElementByCss(driver,"#root > div > nav > h1");
 
         await sleep(3000)
+
+
+        // const element = driver.findElement(By.css("#root > div > div > div > div > div:nth-child(5)"));
+        // await sleep(3000)
+        // expect(movieName).toMatch(await element.getText());
          driver.executeScript('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Yaay! my sample test passed"}}');
          await driver.quit();
        
