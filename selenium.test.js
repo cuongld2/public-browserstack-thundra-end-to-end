@@ -75,6 +75,8 @@ await driver.takeScreenshot()
 
       // Update the test
 
+      
+
 
         const element = driver.findElement(By.css("div.movie-preview:nth-child(2) > a:nth-child(1) > h2:nth-child(1)"));
         await sleep(3000)
