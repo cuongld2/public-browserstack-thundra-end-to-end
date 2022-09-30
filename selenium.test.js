@@ -48,7 +48,7 @@ await driver.takeScreenshot()
 
 await sleep(3000)
         
-        const movieName = "Roman Holiday";
+        const movieName = "Mystic River";
         const movieAuthor = "6334cb86cd20a81a1d0b9c9b";
         const movieContent = "Stuck with boredom in her luxurious confinement, a princess escapes from her guardians and falls in love with an American news reporter in Rome.";
         driver.findElement(By.css("#root > div > nav > div > a:nth-child(2)")).click();
@@ -73,12 +73,12 @@ await driver.takeScreenshot()
 
         await sleep(3000)
 
-        ## Update the test
+      // Update the test
 
 
-        // const element = driver.findElement(By.css("#root > div > div > div > div > div:nth-child(5)"));
-        // await sleep(3000)
-        // expect(movieName).toMatch(await element.getText());
+        const element = driver.findElement(By.css("div.movie-preview:nth-child(2) > a:nth-child(1) > h2:nth-child(1)"));
+        await sleep(3000)
+        expect(movieName).toMatch(await element.getText());
          driver.executeScript('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Yaay! my sample test passed"}}');
          await driver.quit();
        
